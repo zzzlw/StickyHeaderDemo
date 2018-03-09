@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_stick_header"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="#fff"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false"
+    android:orientation="horizontal"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="全部" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="决赛圈 " />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="萌妹战神" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="吃鸡大神" />
+    <TextView
+        android:id="@+id/layout_stick_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="更多" />
+
+</LinearLayout>

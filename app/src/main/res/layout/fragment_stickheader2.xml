@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.test.stickyheader.pull.PeoplePullToRefreshView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.AppBarLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical"
+            app:elevation="0dp">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentScrim="#00000000"
+                app:elevation="1dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:statusBarScrim="#00000000"
+                app:titleEnabled="false">
+
+                <TextView
+                    android:id="@+id/banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#ae0808"
+                    android:gravity="center"
+                    android:text="Banner"
+                    android:textSize="24sp" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+            <include layout="@layout/view_header3" />
+
+
+        </android.support.design.widget.AppBarLayout>
+
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:id="@+id/layout_filter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#64747272"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <net.cachapa.expandablelayout.ExpandableLayout
+                    android:id="@+id/expandableLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    app:el_duration="500"
+                    app:el_expanded="true"
+                    app:el_parallax="0.1">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerView_filter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+                </net.cachapa.expandablelayout.ExpandableLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</com.test.stickyheader.pull.PeoplePullToRefreshView>
